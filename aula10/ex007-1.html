@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Números</title>
+    <style>
+        body{
+            font: normal Arial;
+        }
+
+        h1{
+            font: bold 2.5em Arial;
+        }
+
+        input{
+            font: normal 1.2em Arial;
+            width: 100px;
+        }
+
+        div#res{
+            width: 300px;
+            height: 20px;
+            margin-top: 15px;
+            padding: 8px 10px 10px;
+            font-size: 1.4em;
+            border-radius: 15px;
+            box-shadow: 1px 1px 4px 2px gray;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Somando Números</h1>
+    <input type="number" name="txt1" id="txt1"> +
+    <input type="number" name="txt2" id="txt2">
+    <input type="button" value="Somar" id="somar">
+    <div id="res">Resultado</div>
+    
+</body>
+<script>
+    var soma = document.getElementById('somar')
+    soma.addEventListener('click', clicou)
+
+    function clicou(){
+    var tn1 = document.getElementById('txt1')
+    var tn2 = document.getElementById('txt2')
+    var resposta = document.getElementById('res')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var s = n1 + n2
+    resposta.innerHTML = `<strong>${s}</strong>`
+    }
+    
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    O país que você nasceu é: <input type="text" name="nac01" id="nac01">
+    <input type="button" value="Enviar" onclick="pais()">
+    <div id="msg"></div>
+    <script>
+        function pais(){
+            var nac01 = document.getElementById('nac01')
+            var nacionalidade = nac01.value
+            var mensagem = document.getElementById('msg')
+            mensagem.innerHTML = `<p>País: <strong>${nacionalidade}</strong></p>`
+            if (nacionalidade == 'Brasil'){
+                mensagem.innerHTML += '<p>Oh! Você é do Brasil, eu amo esse país!</p>'
+            } else{
+                mensagem.innerHTML += '<p>Que legal!</p>'
+            }
+        }
+    </script>
+</body>
+</html>
